@@ -1,0 +1,42 @@
+.bodydata{
+	background-color: #efefef;
+}
+
+#login-form{
+	width: 400px;
+	margin: 0 auto;
+	border: 2px solid ;
+	padding: 20px;
+	border-color: #058e57;
+}
+
+#login-form input.inputtext{
+	width: 100%;
+	padding: 5px;
+	height: 30px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+#login-form input.submitdata{
+	background-color: #e50d3c;
+	width: 100%;
+	padding: 9px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	color: white;
+}
+#login-form input.submitdata:hover{
+	color: #09c675;
+}
+#login-form marquee h3{
+	width: 100%;
+	
+}
+#login-form marquee{
+	width: 100%;
+	direction: right;
+}

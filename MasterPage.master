@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>BaiTap</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 232px;
+        }
+        .datalist1{
+             margin-left: 60px;
+             text-align: center;
+        }
+        
+    </style>
+
+       <!-- Bootstrap core CSS -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/album.css" rel="stylesheet">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="auto-style1">
+            <tr>
+                <td colspan="3">
+                    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="" class="navbar-brand d-flex align-items-center"  data-toggle="modal" data-target="#exampleModal">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg> -->
+            <img style="width: 30px; height: 30px; margin-right: 5px" src="image/iconfinder_8_330406.png" alt="">
+
+            <asp:LinkButton style="margin-left: -317px; font-size: 20px" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Home</asp:LinkButton>
+             
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            Contact
+          </button>
+            <asp:LinkButton  style="margin-right: -376px" ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">Login</asp:LinkButton>
+        &nbsp;<asp:Label ID="Label1" runat="server" Text="Tên KH" ForeColor="#00CC99"></asp:Label>
+        </div>
+      </div>
+    </header>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2 " >
+                    <asp:DataList ID="DataList1" runat="server" class="datalist1">
+                        <ItemTemplate>
+                            <asp:LinkButton style="color: #23824c; font-size: 18px" ID="LinkButton1" runat="server" CommandArgument='<%# Eval("maloai") %>' Text='<%# Eval("tenloai") %>' OnClick="LinkButton1_Click"></asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:DataList>
+                </td>
+                <td class="auto-style2">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            
+        
+            
+        
+            
+        
+        </asp:ContentPlaceHolder>
+    </div>
+                </td>
+                <td class="auto-style2">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    
+                     <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top></a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      </div>
+    </footer>
+
+ 
+    
+
+                </td>
+            </tr>
+        </table>
+    </form>
+
+       <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+   
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/holder.min.js"></script>
+</body>
+</html>
